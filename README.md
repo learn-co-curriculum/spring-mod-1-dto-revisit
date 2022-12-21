@@ -112,7 +112,7 @@ this:
 ### JSON Ordering of Properties
 
 We might notice in the JSON above that the order of the properties changed when
-we specified what the name should be in the JSON in the `FootballTeamDTO` class.
+we specified what the property name should be.
 
 If we want a specific ordering, like perhaps we do want the JSON to be in the
 order of: team name, wins, losses, current super bowl champion, then we can
@@ -315,7 +315,7 @@ In this scenario, we might try to remove the
 JSON format where we specify a certain team, but would mismatch the JSON format
 when performing a GET-all request.
 
-So what do we do from here?? How do we get them _both_ to match?
+So what do we do from here? How do we get them _both_ to match?
 
 This is a use case for creating a separate DTO, despite only having one entity
 class, in order to meet the serialization requirements that are expected.
@@ -428,16 +428,15 @@ expected JSON formats that were specified in the requirements!
 In this particular case, it was beneficial to create two separate DTO objects
 to properly serialize the data for the different expected responses.
 
-Note: This is one way to create the DTO objects; however, one could make use of
+Note: This is one way to create the DTO objects; however, we could make use of
 inheritance by having the DTO with the `currentSuperBowlChampion` field inherit
 from the DTO that excluded the field. This would reduce repetitive lines of
 code.
 
 ## DTO versus Entity
 
-Within this lesson thus far, we might now be able to tell the differences
-between a DTO and an entity. A DTO is used **only** to transfer data from one
-process to another. Possibly from an API to a client.
+Let's look at the differences between a data transfer object and an entity
+object:
 
 | DTO                                                        | Entity                                               |
 |------------------------------------------------------------|------------------------------------------------------|
