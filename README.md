@@ -10,9 +10,12 @@
 ## Review of Data Transfer Objects
 
 As a reminder, a **data transfer object (DTO)** is an object that encapsulates
-data in order to carry it between processes. This is a design pattern that
-reduces the amount of calls and processes back and forth to the server by
-batching up multiple parameters in a single call.
+data in order to carry it between processes. Spring uses a `DispatcherServlet`
+to orchestrate and communicate data from one server to a client (or another
+server). There are multiple processes that occur when transferring data to and
+from. Using DTOs to carry the data reduces the amount of calls and processes
+back and forth to the server by batching up multiple parameters in a single
+call.
 
 As we saw before, we didn't even need to create a serializer to serialize or
 deserialize the objects to go from a JSON to a DTO and vice versa. The other
