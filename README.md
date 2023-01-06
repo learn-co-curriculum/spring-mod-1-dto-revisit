@@ -112,6 +112,11 @@ this:
 }
 ```
 
+Note that in a POST request, we'd also have to match the naming specified in the
+`@JsonProperty` annotation.
+
+![add-football-team-with-jsonproperty-names](https://curriculum-content.s3.amazonaws.com/spring-mod-1/dto-revisit/postman-add-football-team-underscores.png)
+
 ### JSON Ordering of Properties
 
 We might notice in the JSON above that the order of the properties changed when
